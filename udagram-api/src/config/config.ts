@@ -35,6 +35,7 @@ export const config = {
   aws_media_bucket: process.env.AWS_MEDIA_BUCKET,
   accessKeyId: process.env.AWS_ACCESs_KEY_ID,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  postgresDb: process.env.POSTGRES_URL,
   url: process.env.URL,
   jwt: {
     secret: process.env.JWT_SECRET,
