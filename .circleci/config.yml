@@ -37,7 +37,7 @@ jobs:
       - eb/setup
       - run:
           name: Deploy Server
-          command: eb deploy
+          command: npm run deploy
 workflows:
   build_and_deploy:
     jobs:
