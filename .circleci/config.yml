@@ -11,7 +11,7 @@ jobs:
       - checkout:
           path: ~/app
       - node/install-packages:
-          app-dir: ~/app/udagram-frontend
+          # app-dir: ~/app/udagram-frontend
       - aws-cli/install
       - aws-cli/setup:
           profile-name: default
