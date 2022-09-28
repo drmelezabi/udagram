@@ -33,6 +33,8 @@ jobs:
             printenv > www/.env
             npm run archive
       - aws-cli/install
+      - eb/setup
+      - aws-cli/setup
       - run:
           name: Deploy Server
           command: npm run deploy
