@@ -12,10 +12,12 @@ jobs:
           path: ~/app
       - node/install-packages:
           app-dir: ~/app/udagram-frontend
+      - aws-cli/install
+      - aws-cli/setup:
+          profile-name: default
       - run:
           name: Build Frontend
           command: npm run build
-      - aws-cli/install
       - run:
           name: Deploy Frontend
           command: aws s3 cp --recursive --acl public-read ./www $S3_BUCKET_FRONTEND
