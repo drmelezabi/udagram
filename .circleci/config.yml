@@ -14,7 +14,7 @@ jobs:
           app-dir: ~/app/udagram-frontend
       # - aws-cli/install
       - aws-cli/setup:
-          profile-name: default
+          profile-name: melezabi
       - run:
           name: Build Frontend
           command: npm run build
