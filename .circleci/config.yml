@@ -26,6 +26,9 @@ jobs:
           path: ~/app
       - node/install-packages:
           app-dir: ~/app/udagram-api
+      - eb/setup
+      - aws-cli/setup
+      - checkout
       - run:
           name: Build and Archive Server
           command: |-
