@@ -1,6 +1,6 @@
 ## Udagram Pipeline
 
-![Pipeline](Pipline architecture.png)
+![Pipeline](PiplineArchitecture.png)
 
 ### Continuous Integration
 
