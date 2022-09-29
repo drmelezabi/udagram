@@ -1,6 +1,6 @@
 ## Udagram Pipeline
 
-![Pipeline](PiplineArchitecture.png)
+![Pipeline](https://github.com/drmez2020/udagram/blob/main/docs/PiplineArchitecture.png)
 
 ### Continuous Integration
 
