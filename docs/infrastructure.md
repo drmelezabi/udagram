@@ -1,6 +1,6 @@
 ## Udagram Infrastructure
 
-![Architecture](Architecture Diagram.png)
+![Architecture](https://github.com/drmez2020/udagram/blob/main/docs/ArchitectureDiagram.png)
 
 ### AWS
 
