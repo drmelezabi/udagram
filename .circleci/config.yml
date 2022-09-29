@@ -43,5 +43,11 @@ jobs:
 workflows:
   deploy_server_&_frontend:
     jobs:
-      - frontend
-      - serverapi
+      - frontend:
+          filters:
+            branches:
+              only: main
+      - serverapi:
+          filters:
+            branches:
+              only: main
