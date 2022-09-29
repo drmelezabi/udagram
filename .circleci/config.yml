@@ -17,6 +17,9 @@ jobs:
           name: Build Frontend
           command: npm run build
       - run:
+          name: test e2e
+          command: npm run test
+      - run:
           name: Deploy Frontend
           command: aws s3 cp --recursive --acl public-read ./www $S3_BUCKET_FRONTEND
   serverapi:
@@ -33,9 +36,6 @@ jobs:
             npm run build
             printenv > www/.env
             npm run archive
-      - run:
-          name: test e2e
-          command: npm run test
       - aws-cli/install
       - run:
           name: Deploy Server
