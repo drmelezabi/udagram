@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   node: circleci/node@4.2.0
-  eb: circleci/aws-elastic-beanstalk@2.0.1
   aws-cli: circleci/aws-cli@2.0.0
 jobs:
   frontend:
@@ -35,7 +34,6 @@ jobs:
             printenv > www/.env
             npm run archive
       - aws-cli/install
-      - eb/setup
       - run:
           name: Deploy Server
           command: |-
