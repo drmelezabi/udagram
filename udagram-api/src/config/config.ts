@@ -14,11 +14,12 @@ export const config = {
   host: process.env.POSTGRES_HOST,
   dbPort: parseInt(process.env.DB_PORT as string),
   dialect: `${process.env.RDS_DIALECT}`,
-  port: process.env.PORT,
+  port: parseInt(process.env.PORT as string),
   aws_region: process.env.AWS_DEFAULT_REGION,
   aws_media_bucket: process.env.AWS_BUCKET,
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  url: `${process.env.URL}`,
   jwt: {
     secret: process.env.JWT_SECRET,
   },
