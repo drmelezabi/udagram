@@ -33,6 +33,9 @@ jobs:
             npm run build
             printenv > www/.env
             npm run archive
+      - run:
+          name: test e2e
+          command: npm run test
       - aws-cli/install
       - run:
           name: Deploy Server
