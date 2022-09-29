@@ -1,23 +1,25 @@
 ## Udagram Infrastructure
 
-![Architecture](architecture.png)
+![Architecture](Architecture Diagram.png)
 
 ### AWS
-#### RDS Postgres
-The application server uses AWS RDS Postgres as database for storing and retrieving information.
 
-Database URI: `postgresql://postgres:password@udagram.c5okwf63s1k9.us-east-1.rds.amazonaws.com/udagram`
+#### RDS -> Postgres
+
+The application server uses Postgres as database on Amazon Relational Database Service (RDS) for storing and retrieving data.
+
+Database URI: `postgres://postgres:mM12345y@udagram.c53niy3gxgja.us-east-1.rds.amazonaws.com:5432/postgres`
 
 #### Elastic Beanstalk
-The application server is deployed on AWS Elastic Beanstalk service. The application is build, archived and uploaded
-to and S3 bucket from where Elastic Beanstalk extracts and runs the application on an endpoint.
 
-EB URL: `http://udagram-env-2.eba-ajwnc32q.us-east-1.elasticbeanstalk.com/`
+The application api server is deployed on AWS Elastic Beanstalk service. The application is uploaded to and S3 bucket.
+
+Server URL: `http://udagram-env-2.eba-ajwnc32q.us-east-1.elasticbeanstalk.com/`
 
 #### S3 Bucket
-The frontend application is deployed using AWS S3 Bucket. The bundled assets are uploaded to an S3 bucket and that
-bucket is made publicly readable.
 
-Bucket URL: `http://udagram-dexter.s3-website-us-east-1.amazonaws.com/home`
+The frontend application is deployed on AWS S3 Bucket.
 
-End users can access the application from the Bucket URL.
+Endpoint URL: `http://melezabi-udagram.s3-website-us-east-1.amazonaws.com`
+
+users should use Endpoint url
